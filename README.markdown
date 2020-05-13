@@ -1,4 +1,4 @@
-(A fork to keep the simple changes I make for better integration with `grep` and `Vim`)
+(A fork to keep the simple changes I make for better integration with `grep` and `vim`)
 
 # ti &mdash; A silly simple time tracker
 
