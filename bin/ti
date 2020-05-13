@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # encoding: utf-8
 
 """
@@ -228,11 +228,11 @@ def action_log(period):
         if secs:
             tmsg.append(str(secs) + ' second' + ('s' if secs > 1 else ''))
 
-        log[name]['tmsg'] = ', '.join(tmsg)[::-1].replace(',', ' &'[::-1], 1)[::-1]
+        log[name]['tmsg'] = ', '.join(tmsg)[::-1].replace(',', ' and'[::-1], 1)[::-1]
 
     for name, item in sorted(log.items(), key=(lambda x: x[1]), reverse=True):
-        print(name.ljust(name_col_len), ' ∙∙ ', item['tmsg'],
-                end=' ← working\n' if current == name else '\n')
+        print(name.ljust(name_col_len), '  ', item['tmsg'],
+                end=', working\n' if current == name else '\n')
 
 
 def action_edit():
@@ -349,7 +349,7 @@ def helpful_exit(msg=__doc__):
 def parse_args(argv=sys.argv):
     global use_color
 
-    argv = [arg.decode('utf-8') for arg in argv]
+    argv = [arg for arg in argv]
 
     if '--no-color' in argv:
         use_color = False
