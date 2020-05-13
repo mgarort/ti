@@ -1,4 +1,4 @@
-# Development moved to https://github.com/tbekolay/ti
+(A fork to keep the simple changes I make for better integration with `grep` and `Vim`)
 
 # ti &mdash; A silly simple time tracker
 
